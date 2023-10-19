@@ -1,5 +1,4 @@
 #include "monty.h"
-bus_t bus = {NULL, NULL, NULL, 0};
 
 
 /**
@@ -7,7 +6,7 @@ bus_t bus = {NULL, NULL, NULL, 0};
 *@argc: number of arguments
 *@argv: monty file location
 *Return: success (0)
-*/
+*/"
 int main(int argc, char *argv[])
 {
 		char *content;
@@ -16,17 +15,18 @@ int main(int argc, char *argv[])
 		ssize_t read_line = 1;
 		stack_t *stack = NULL;
 		unsigned int counter = 0;
+		bus_t bus = {NULL, NULL, NULL, 0};
 
 		if (argc != 2)
 		{
-			fprintf(stderr, "USAGE: monty file\n");
+			fprintf(stderr, "USAGE : monty file\n");
 			exit(EXIT_FAILURE);
 		}
 		file = fopen(argv[1], "r");
 		bus.file = file;
 		if (!file)
 		{
-			fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+			fprintf(stderr, "Error : Can't open file %s\n", argv[1]);
 			exit(EXIT_FAILURE);
 		}
 		while (read_line > 0)
