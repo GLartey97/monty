@@ -1,4 +1,5 @@
 #include "monty.h"
+bus_t bus = {NULL, NULL, NULL, 0};
 
 /**
 *f_push - a program that add node to the stack
